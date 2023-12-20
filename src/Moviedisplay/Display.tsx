@@ -25,7 +25,7 @@ function Display(props: DisplayProps) {
     const dispatch = useDispatch();
 
     const handleAddToCart = (data: string) => {
-      const filtercart = user.movies?.find((x: MovieData)=>x.Title == data)
+      const filtercart: MovieData[] = user.movies?.find((x: MovieData)=>x.Title == data)
 
       dispatch(addcart(filtercart));
   };
